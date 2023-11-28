@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class UberPriceCalc{
+  constructor(baseFare, costPerKm) {
+    this.baseFare = baseFare;
+    this.costPerKm = costPerKm;
+  }
+
+  calculatePrice(distanceInKm) {
+    return this.baseFare + this.costPerKm * distanceInKm;
+  }
+}
+const calculator = new UberPriceCalc(5, 2.5); 
+// Example base fare: 5, cost per kilometer: 2.5
+const distance = 10; 
+// Example distance traveled: 10 kilometers
+const price = calculator.calculatePrice(distance);
+
+console.log(`The price of the Uber ride is $${price}.`);
+
+    </script>
+</body>
+</html>
